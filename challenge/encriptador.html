@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style-encriptador.css">
+    </head>
+    <body>
+        <header>
+
+
+        </header>
+        <main>
+            <form id="eForm">
+                
+                
+                <!--<textarea cols="70" rows="10" id="mensaje" class="input-box"></textarea>-->
+
+
+                <input type="text" class="textbox1" id="textoEntrada" autofocus>
+                <button type="button" onclick="encriptar()"> Encriptar</button>
+
+                <input type="text" class="textbox2" id="textoSalida">
+                <button type="button" onclick="desencriptar()"> Desencriptar</button>
+
+
+                <script>
+
+                    function encriptar () {
+                        var texto = document.getElementById("textoEntrada");
+                        var mensaje = "";
+                        var array2Enc = [];
+                        var arrayFinal = [];
+
+                        var letra;
+
+                        //console.log(texto);
+                        //alert(texto.value);
+
+                        array2Enc = texto.value.split('');
+
+                        //Llaves de encriptacion
+                        //La letra "a" es convertida para "ai"
+                        //La letra "e" es convertida para "enter"
+                        //La letra "i" es convertida para "imes"
+                        //La letra "o" es convertida para "ober"
+                        //La letra "u" es convertida para "ufat"
+                        
+                        //console.log(array2Enc);
+
+                        for (let i=0; i < array2Enc.length; i++ ) { 
+                            console.log(array2Enc[i]);
+                            letra = array2Enc[i];
+
+                            if (letra == "a"){
+                                arrayFinal.push("ai");
+                            } else if (letra == "e") {
+                                arrayFinal.push("enter");
+                            } else if (letra == "i") {
+                                arrayFinal.push("imes");
+                            } else if (letra == "o") {
+                                arrayFinal.push("ober");
+                            } else if (letra == "u") {
+                                arrayFinal.push("ufat");
+                            } else {
+                                arrayFinal.push(letra);
+                            }
+                            console.log(arrayFinal[i]);
+                            mensaje = mensaje + arrayFinal[i];
+                        }
+
+                        //console.log(mensaje);
+                        document.getElementById("textoSalida").value = mensaje
+                    }
+
+                    function desencriptar () {
+                        var texto = document.getElementById("textoEntrada");
+                        var mensaje = "";
+                        var array2Desenc = [];
+                        var arrayFinalD = [];
+                        var j = 0;
+                        var letra;
+
+
+                        array2Desenc = texto.value.split('');
+
+                        //Llaves de encriptacion
+                        //La letra "a" es convertida para "ai"
+                        //La letra "e" es convertida para "enter"
+                        //La letra "i" es convertida para "imes"
+                        //La letra "o" es convertida para "ober"
+                        //La letra "u" es convertida para "ufat"
+                        
+                        console.log(array2Desenc);
+
+                        for (let i=0; i < array2Desenc.length; i++ ) { 
+                            console.log(array2Desenc[i]);
+                            letra = array2Desenc[i];
+
+                            if (letra == "a"){
+                                j = i + 1;
+                                if (array2Desenc[j] = "i"){
+                                    i++;
+                                }
+                                arrayFinalD.push("a");
+                            } else if (letra == "e") {
+                                j = i + 1;
+                                if (array2Desenc[j] = "n"){
+                                    j++;
+                                    if (array2Desenc[j] = "t"){
+                                        j++;
+                                        if (array2Desenc[j] = "e"){
+                                            j++;
+                                            if (array2Desenc[j] = "r"){
+                                                arrayFinalD.push("e");
+                                                i = i + 4; 
+                                            }
+                                        }
+                                    }
+                                } else {
+                                    arrayFinalD.push(letra);
+                                }
+                            } else if (letra == "i") {
+                                j = i + 1;
+                                if (array2Desenc[j] = "m"){
+                                    j++;
+                                    if (array2Desenc[j] = "e"){
+                                        j++;
+                                        if (array2Desenc[j] = "s"){
+                                            j++;
+                                            arrayFinalD.push("i");
+                                                i = i + 3;                                         
+                                        }
+                                    }
+                                } else {
+                                    arrayFinalD.push(letra);
+                                }
+                            } else if (letra == "o") {
+                                j = i + 1;
+                                if (array2Desenc[j] = "b"){
+                                    j++;
+                                    if (array2Desenc[j] = "e"){
+                                        j++;
+                                        if (array2Desenc[j] = "r"){
+                                            j++;
+                                            arrayFinalD.push("o");
+                                                i = i + 3;                                         
+                                        }
+                                    }
+                                } else {
+                                    arrayFinalD.push(letra);
+                                }
+                            } else if (letra == "u") {
+                                j = i + 1;
+                                if (array2Desenc[j] = "f"){
+                                    j++;
+                                    if (array2Desenc[j] = "a"){
+                                        j++;
+                                        if (array2Desenc[j] = "t"){
+                                            j++;
+                                            arrayFinalD.push("u");
+                                                i = i + 3;                                         
+                                        }
+                                    }
+                                } else {
+                                    arrayFinalD.push(letra);
+                                }
+                            } else {
+                                arrayFinalD.push(letra);
+                            }
+                            mensaje = mensaje + letra;
+                        }
+
+                        document.getElementById("textoSalida").value = mensaje
+                    }
+
+
+
+                </script>
+            </form>
+
+
+        </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
