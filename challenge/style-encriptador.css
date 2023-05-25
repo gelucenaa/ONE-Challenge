@@ -128,11 +128,22 @@ flex-grow: 0;
 }
 
 .pie{
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    /*font-size: small;*/
+    font-style: italic;
+    
+}
+
+
+.advertencia{
+    margin-bottom: 10px;
     text-align: left;
     /*font-size: small;*/
     font-style: italic;
     padding-left: 30px;
+    color: red;
 }
 
 img {

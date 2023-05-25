@@ -30,7 +30,7 @@
 
                     <!--<input type="text" class="textbox1" id="textoEntrada" autofocus value="Ingrese el texto aquí">-->
 
-                    <input type="text" class="textbox1" id="textoEntrada" autofocus >
+                    <input type="text" class="textbox1" id="textoEntrada" autofocus pattern="[a-z]">
                     
                     <input type="text" class="textbox2" id="textoSalida">
 
@@ -45,6 +45,7 @@
 
                 </div>
                 <div>
+                    <p class="advertencia"> Solo letras minusculas y sin acentos </p>
                     <button type="button" class="boton1" onclick="encriptar()" > Encriptar</button>
                     <button type="button" class="boton2" onclick="desencriptar()"> Desencriptar</button>
                     <button type="button" class="boton3" onclick="copiar()"> Copiar</button>
