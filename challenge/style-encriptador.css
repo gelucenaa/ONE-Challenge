@@ -2,21 +2,39 @@
 
 .textbox1{
     display: inline-block;
-    height: 200px;
-    width: 40%;
-    padding-left: 30px;
-    padding-bottom: 20px;
+    height: 498px;
+    width: 219px;
     margin-bottom: 20px;
+    margin-left: 80px;
+    border-radius: 10px;
 }
 .textbox2{
     display: inline-block;
-    height: 200px;
-    width: 40%;
-    padding-right: 30px;
-    padding-bottom: 20px;
+    height: 498px;
+    width: 219px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
 
 
 }
+
+.textbox3{
+    display: inline-block;
+    height: 495px;
+    width: 219px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    vertical-align: top;
+    position: relative;
+    left: -246px;
+    top: 4px;
+    border-radius: 15px;
+
+}
+
 
 
 .texto{
@@ -26,15 +44,16 @@
     padding-bottom: 30px;
 }
 .boton1{
-
+    margin-left: 20px;
     box-sizing: border-box;
 
     left: 240px;
-    top: 885px
+    top: 885px;
+
 
     /* Auto layout */
 
-    display: auto;
+    display:auto;
     flex-direction: row;
     align-items: flex-start;
     padding: 24px;
@@ -110,7 +129,12 @@ flex-grow: 0;
 
 .pie{
     margin-top: 40px;
-    text-align: center;
+    text-align: left;
     /*font-size: small;*/
     font-style: italic;
+    padding-left: 30px;
+}
+
+img {
+    margin-left: 20px;
 }
