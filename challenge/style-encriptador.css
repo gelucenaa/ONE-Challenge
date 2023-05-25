@@ -2,13 +2,107 @@
 
 .textbox1{
     display: inline-block;
-    float: left;
     height: 200px;
     width: 40%;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 .textbox2{
     display: inline-block;
-    float: right;
     height: 200px;
     width: 40%;
+    padding-right: 30px;
+    padding-bottom: 20px;
+
+
+}
+
+
+.texto{
+    font-size: 20px;
+    padding-left: 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.boton1{
+
+    box-sizing: border-box;
+
+    left: 240px;
+    top: 885px
+
+    /* Auto layout */
+
+    display: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    
+    width: 328px;
+    height: 67px;
+    
+    /* Dark blue/dark-blue-300 */
+    
+    background: #0A3871;
+    border-radius: 24px;
+    color: white;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;    
+}
+
+.boton2{
+    box-sizing: border-box;
+
+    top: 40px;
+    left: 30%;
+/* Auto layout */
+
+
+width: 328px;
+height: 67px;
+
+/* Light gray */
+
+background: #D8DFE8;
+/* Dark blue/dark-blue-300 */
+
+border: 1px solid #0A3871;
+border-radius: 24px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.boton3{
+    box-sizing: border-box;
+
+
+/* Auto layout */
+
+
+width: 328px;
+height: 67px;
+
+/* Light orange */
+
+background: white;
+
+border: 1px solid #0A3871;
+border-radius: 24px;
+color: black;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
 }

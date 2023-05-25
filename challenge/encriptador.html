@@ -15,19 +15,30 @@
 
         </header>
         <main>
+            <div class="contenedor" style="float: left">
+                <img src="imagenes/Vector.jpg">
+            </div>
+            <div>   
+                <h1 class="texto">ONE - Alura Challenge: Encriptador</h1>
+            </div>
+
             <form id="eForm">
+                <div>
                 
-                
-                <!--<textarea cols="70" rows="10" id="mensaje" class="input-box"></textarea>-->
+                    <!--<textarea cols="70" rows="10" id="mensaje" class="input-box"></textarea>-->
 
 
-                <input type="text" class="textbox1" id="textoEntrada" autofocus>
-                <button type="button" onclick="encriptar()"> Encriptar</button>
+                    <input type="text" class="textbox1" id="textoEntrada" autofocus value="Ingrese el texto aquí">
 
-                <input type="text" class="textbox2" id="textoSalida">
-                <button type="button" onclick="desencriptar()"> Desencriptar</button>
+                    <input type="text" class="textbox2" id="textoSalida">
 
+                </div>
+                <div>
+                    <button type="button" class="boton1" onclick="encriptar()" > Encriptar</button>
+                    <button type="button" class="boton2" onclick="desencriptar()"> Desencriptar</button>
+                    <button type="button" class="boton3" onclick="copiar()"> Copiar</button>
 
+                </div>
                 <script>
 
                     function encriptar () {
@@ -178,7 +189,22 @@
                         document.getElementById("textoSalida").value = mensaje
                     }
 
+                function copiar () {
+                      // Get the text field
+                    var copyText = document.getElementById("textoSalida");
 
+                    // Select the text field
+                    copyText.select();
+                    copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                     // Copy the text inside the text field
+                    navigator.clipboard.writeText(copyText.value);
+
+                    // Alert the copied text
+                    alert("Copied the text: " + copyText.value);
+
+                    //tomado de https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
+                }
 
                 </script>
             </form>
