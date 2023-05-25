@@ -40,13 +40,14 @@
     padding: 24px;
     gap: 8px;
     
-    width: 328px;
+    width: 200px;
     height: 67px;
+    
     
     /* Dark blue/dark-blue-300 */
     
     background: #0A3871;
-    border-radius: 24px;
+    border-radius: 20px;
     color: white;
     
     /* Inside auto layout */
@@ -64,7 +65,7 @@
 /* Auto layout */
 
 
-width: 328px;
+width: 200px;
 height: 67px;
 
 /* Light gray */
@@ -89,7 +90,7 @@ flex-grow: 0;
 /* Auto layout */
 
 
-width: 328px;
+width: 200px;
 height: 67px;
 
 /* Light orange */
