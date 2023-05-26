@@ -130,7 +130,7 @@ flex-grow: 0;
 .pie{
     margin-top: 20px;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
     /*font-size: small;*/
     font-style: italic;
     
